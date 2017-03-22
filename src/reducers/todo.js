@@ -22,6 +22,7 @@ export default (state = initialState, payload) => {
                 ...state,
                 {
                     title: payload.item,
+                    completed: false,
                     id: makeId()
                 }
             ];

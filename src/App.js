@@ -7,7 +7,7 @@ import * as todoActions from './actions/todo';
 
 import TodoList from './components/TodoList/TodoList'
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
     this.state = {};
@@ -37,17 +37,9 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(state, props) {
-    console.log("state", state)
-    return {
-        todos: state.todos
-    };
-}
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(todoActions, dispatch)
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-// export default App;
+export default connect(null, mapDispatchToProps)(App);

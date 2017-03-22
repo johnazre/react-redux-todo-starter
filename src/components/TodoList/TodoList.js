@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as todoActions from '../../actions/todo';
 
-class TodoList extends Component {
+export class TodoList extends Component {
 
   render () {
     if(this.props.todos) {
