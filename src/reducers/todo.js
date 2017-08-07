@@ -1,33 +1,19 @@
-// let initialState = [
-//     {
-//         id: 10,
-//         title: 'blah10'
-//     },
-//     {
-//         id: 20,
-//         title: 'blah20'
-//     },
-//     {
-//         id: 30,
-//         title: 'blah30'
-//     }
-// ]
-
 let initialState = []
 
-export default (state = initialState, payload) => {
-    switch (payload.type) {
+export default (state = initialState, action) => {
+  console.log(action);
+    switch (action.type) {
         case 'add':
             return [
                 ...state,
                 {
-                    title: payload.item,
+                    title: action.payload,
                     completed: false,
                     id: makeId()
                 }
             ];
         case 'remove':
-            return state.filter(item => item !== payload.item)
+            return state.filter(item => item !== action.item)
         case 'complete':
             return [...state]
         default:

@@ -9,7 +9,7 @@ export class TodoList extends Component {
   render () {
     if(this.props.todos) {
       const theTodos = this.props.todos.map(todo => {
-        return <li key={todo.id}>{todo.title} <span onClick={() => this.props.actions.removeFromList(todo)}> x </span>  </li>
+        return <li key={todo.id}>{todo.title} <span onClick={() => this.props.actions.removeFromList(todo)}></span>  </li>
       })
       return (
         <div>
@@ -29,7 +29,6 @@ export class TodoList extends Component {
 }
 
 function mapStateToProps(state, props) {
-    console.log('this is todolist', state)
     return {
         todos: state.todos
     };

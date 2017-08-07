@@ -1,13 +1,14 @@
-export const addToList = (item) => {
+export const addToList = (text) => {
+  console.log('the text', text);
   return {
       type: 'add',
-      item
+      payload: text
   };
 }
 
-export const removeFromList = (item) => {
+export const removeFromList = (text) => {
   return {
       type: 'remove',
-      item
+      payload: text
   };
 }
