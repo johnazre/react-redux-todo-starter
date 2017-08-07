@@ -7,6 +7,7 @@ export const addToList = (text) => {
 }
 
 export const removeFromList = (text) => {
+  console.log(text);
   return {
       type: 'remove',
       payload: text

@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
                 }
             ];
         case 'remove':
-            return state.filter(item => item !== action.item)
+            return state.filter(item => item !== action.payload)
         case 'complete':
             return [...state]
         default:
