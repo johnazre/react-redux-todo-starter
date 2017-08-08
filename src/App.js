@@ -24,6 +24,10 @@ export class App extends Component {
     this.props.actions.addToList(this.state.value);
   }
 
+  componentDidMount() {
+    this.props.actions.getList();
+  }
+
   render() {
     return (
       <div>
