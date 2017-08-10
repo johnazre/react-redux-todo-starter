@@ -3,10 +3,6 @@ import { Field, reduxForm } from 'redux-form'
 
 export class TodoInput extends Component {
 
-  heardIt(values) {
-    console.log('heard it', values);
-  }
-
   render() {
     const { handleSubmit } = this.props
     return (

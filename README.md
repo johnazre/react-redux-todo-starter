@@ -1,4 +1,4 @@
-# Create-React-App Todo List with Redux and Jest
+# Create-React-App Todo List with Redux-Form and Redux-Promise-Middleware
 
 To get started:
 ```
