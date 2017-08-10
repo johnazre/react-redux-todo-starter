@@ -1,9 +1,8 @@
 let initialState = []
 
 export default(state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
-    case 'add':
+    case 'ADD':
       return [
         ...state, {
           title: action.payload,
@@ -11,6 +10,9 @@ export default(state = initialState, action) => {
           id: makeId()
         }
       ];
+    case 'ADD_FULFILLED':
+      console.log('action', action)
+      return state;
     case 'remove':
       return state.filter(item => item !== action.payload)
     case 'complete':

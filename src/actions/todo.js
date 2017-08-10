@@ -1,10 +1,12 @@
 import axios from 'axios';
 
 export const addToList = (text) => {
-  console.log('the text', text);
   return {
-      type: 'add',
-      payload: text
+      type: 'ADD',
+      payload: axios.post(`https://jsonplaceholder.typicode.com/posts`, {
+          title: text,
+          body: 'blah'
+        })
   };
 }
 
