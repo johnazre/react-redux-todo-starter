@@ -1,0 +1,4 @@
+{
+  "esversion": 6,
+  "-W138": true
+}

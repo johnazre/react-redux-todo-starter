@@ -1,4 +1,4 @@
-let initialState = []
+let initialState = [];
 
 export default(state = initialState, action) => {
   switch (action.type) {
@@ -10,15 +10,12 @@ export default(state = initialState, action) => {
           id: makeId()
         }
       ];
-    case 'ADD_FULFILLED':
-      console.log('action', action)
-      return state;
     case 'remove':
-      return state.filter(item => item !== action.payload)
+      return state.filter(item => item !== action.payload);
     case 'complete':
-      return [...state]
+      return [...state];
     case 'FETCH_PENDING':
-      console.log('pending')
+      console.log('pending');
       return [...state];
     case 'FETCH_FULFILLED':
       console.log('worked!', action.payload.data);
@@ -31,7 +28,7 @@ export default(state = initialState, action) => {
   }
 };
 
-var counter = 0
+var counter = 0;
 function makeId() {
   return counter++;
 }
