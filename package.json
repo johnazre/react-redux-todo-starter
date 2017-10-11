@@ -1,5 +1,5 @@
 {
-  "name": "cra-testing",
+  "name": "react-redux-todo-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
