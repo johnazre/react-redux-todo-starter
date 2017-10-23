@@ -1,4 +1,12 @@
-# Create-React-App Todo List with Redux-Form and Redux-Promise-Middleware
+# React-redux-todo-starter-project
+## Contains the following:
+* React
+* Redux/React-Redux
+* React Router (`react-router-dom`)
+* Redux Form
+* Redux Promise Middleware (A lightweight alternative to redux-thunk)
+* Redux Logger (A great logger tool to keep track of actions fired and updated state)
+
 
 To get started:
 ```
