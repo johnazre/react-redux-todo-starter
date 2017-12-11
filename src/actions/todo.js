@@ -1,27 +1,26 @@
 import axios from 'axios';
 
 export const addToList = (text) => {
-  return {
+  return (dispatch) => dispatch({
       type: 'ADD',
-      // payload: axios.post(`https://jsonplaceholder.typicode.com/posts`, {
-      //     title: text,
-      //     body: 'blah'
-      //   })
       payload: text
-  };
+  });
 };
 
 export const removeFromList = (text) => {
-  console.log(text);
-  return {
+  return (dispatch) => dispatch({
       type: 'remove',
       payload: text
-  };
+  });
 };
 
 export const getList = () => {
-  return {
+  return async (dispatch) => {
+    dispatch({type: "FETCH_LIST_PENDING"})
+    let todos = await axios.get('https://jsonplaceholder.typicode.com/todos')
+    dispatch({
       type: 'FETCH',
-      payload: axios.get('http://localhost:8000/todos')
-  };
+      payload: todos
+    })
+  }
 };
