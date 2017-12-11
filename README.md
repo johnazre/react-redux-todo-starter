@@ -1,7 +1,8 @@
 # React-redux-todo-starter-project
 ## Contains the following:
 * React
-* Redux/React-Redux
+* Redux
+* React-Redux
 * React Router (`react-router-dom`)
 * Redux Form
 * Redux Thunk (A side-effect library that handles both synchronous and asynchronous action dispatches)
