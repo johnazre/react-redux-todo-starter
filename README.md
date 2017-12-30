@@ -7,6 +7,7 @@
 * Redux Form
 * Redux Thunk (A side-effect library that handles both synchronous and asynchronous action dispatches)
 * Redux Logger (A great logger tool to keep track of actions fired and updated state)
+* Also built to work with [Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
 
 To get started:
