@@ -13,14 +13,3 @@ export const removeFromList = (text) => {
       payload: text
   });
 };
-
-export const getList = () => {
-  return async (dispatch) => {
-    dispatch({type: "FETCH_LIST_PENDING"})
-    let todos = await axios.get('https://jsonplaceholder.typicode.com/todos')
-    dispatch({
-      type: 'FETCH',
-      payload: todos
-    })
-  }
-};

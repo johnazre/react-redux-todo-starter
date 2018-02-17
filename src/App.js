@@ -3,7 +3,7 @@ import './App.css';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as todoActions from './actions/todo';
+import {addToList} from './actions/todo';
 
 import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList/TodoList'
@@ -13,7 +13,7 @@ export class App extends Component {
   mySubmit(values) {
     console.log('the vals', values);
     console.log('the props', this);
-    this.props.actions.addToList(values.title)
+    this.props.addToList(values.title)
   }
 
   render() {
@@ -26,9 +26,6 @@ export class App extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(todoActions, dispatch)
-    }
-}
+const mapDispatchToProps = dispatch => bindActionCreators({ addToList }, dispatch)
+
 export default connect(null, mapDispatchToProps)(App);
