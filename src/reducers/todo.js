@@ -14,15 +14,8 @@ export default(state = initialState, action) => {
       return state.filter(item => item !== action.payload);
     case 'complete':
       return [...state];
-    case 'FETCH_PENDING':
-      console.log('pending');
-      return [...state];
-    case 'FETCH_FULFILLED':
-      console.log('worked!', action.payload.data);
-      return state.concat(action.payload.data);
-    case 'FETCH_REJECTED':
-      console.log('no workie!');
-      return [...state];
+    case "FETCH_TODOS":
+      return [...action.payload.data]
     default:
       return state;
   }

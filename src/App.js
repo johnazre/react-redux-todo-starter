@@ -11,8 +11,6 @@ import TodoList from './components/TodoList/TodoList'
 export class App extends Component {
 
   mySubmit(values) {
-    console.log('the vals', values);
-    console.log('the props', this);
     this.props.addToList(values.title)
   }
 

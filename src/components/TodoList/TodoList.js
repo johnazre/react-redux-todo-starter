@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -40,5 +41,8 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
+TodoList.propTypes = {
+  todos: PropTypes.array
+}
+
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
-// export default TodoList;

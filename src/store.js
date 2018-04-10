@@ -6,8 +6,6 @@ import thunkMiddleware from 'redux-thunk';
 export default(initialState) => {
     return createStore(
       rootReducer,
-      compose(
-        applyMiddleware(logger, thunkMiddleware)
-      )
+      applyMiddleware(logger, thunkMiddleware)
     );
 }
